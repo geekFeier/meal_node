@@ -1,6 +1,6 @@
 function Food(){
     this.getFood = function(){
-      var mysql  = require('mysql');   
+      var mysql  = require('mysql');
       var connection = mysql.createConnection({     
         host     : 'localhost',
         user     : 'root',
@@ -12,15 +12,16 @@ function Food(){
        
       var modSql = "SELECT * FROM food_list";
       
-      connection.query(modSql,function (err, result) {
+      connection.query(modSql,function (err, result){
          if(err){
            console.log('[UPDATE ERROR] - ',err.message);
            return;
          } 
-         console.log(result);
-         // response.write(result);
-      });
-      connection.end();
+         console.log('1~~' + result);  
+         return result; 
+         
+      }); 
+      connection.end(); 
     }
     
 }
