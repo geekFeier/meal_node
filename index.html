@@ -22,9 +22,9 @@
 			</div>
 
 			<div class="backgrounds" id="time">
-				<div class="first"><div class="sim-button button" onselectstart="return false;"><span class="food-btn">Breakfast</span></div></div>
-				<div class="second"><div class="sim-button button" onselectstart="return false;"><span class="food-btn">Lunch</span></div></div>
-				<div class="third"><div class="sim-button button" onselectstart="return false;"><span class="food-btn">Supper</span></div></div>
+				<div class="first"><div class="sim-button button" onselectstart="return false;"><span class="food-btn" data-type="breakfast">Breakfast</span></div></div>
+				<div class="second"><div class="sim-button button" onselectstart="return false;"><span class="food-btn" data-type="lunch">Lunch</span></div></div>
+				<div class="third"><div class="sim-button button" onselectstart="return false;"><span class="food-btn" data-type="supper">Supper</span></div></div>
 			</div> 
 			<div class="food-div">
 				<ul id="food">
@@ -51,9 +51,9 @@
 		<div id="mood-bg"></div>
 		<div id="mood-box">
 			<div id="mood-img"></div> 
-			<div id="mood-message" class="message"></div>
-			<div id="mood-button">
-				<button id="mood-btn" class="mood-btn">将爱情进行到底</button>
+			<div class="message"></div>
+			<div>
+				<button class="mood-btn">将爱情进行到底</button>
 			</div>
 		</div>
 	</div>
@@ -61,9 +61,9 @@
 		<div id="mood-bg"></div>
 		<div id="mood-box">
 			<div id="mood-img"></div> 
-			<div id="mood-message" class="message">😝 嘻嘻嘻嘻 <span id="food-name"></span> 与你不见不散~</div>
-			<div id="mood-button">
-				<button id="mood-btn" class="mood-btn">走进婚姻的殿堂</button>
+			<div class="message">😝 嘻嘻嘻嘻 <span id="food-name"></span> 与你不见不散~</div>
+			<div>
+				<button class="mood-btn">走进婚姻的殿堂</button>
 			</div>
 		</div>
 	</div>
@@ -72,20 +72,21 @@
 </html>
 
 <script>
-	$.ajax({
-		url: 'http://127.0.0.1:8000',
-		type: 'get',
-		dataType: 'text'
-	})
-	.done(function(response) {
-		console.log('success');
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
+	// $.ajax({
+	// 	url: 'http://127.0.0.1:8000',
+	// 	type: 'get',
+	// 	dataType: 'jsonp'
+	// })
+	// .done(function(response) {
+	// 	console.log('success');
+	// 	console.log(response)
+	// })
+	// .fail(function(response) {
+	// 	console.log("error"); 
+	// })
+	// .always(function() {
+	// 	console.log("complete");
+	// });
 
 
 	 

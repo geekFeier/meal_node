@@ -1,4 +1,4 @@
-function Food(){
+/*function Food(){
     this.getFood = function(){
       var mysql  = require('mysql');
       var connection = mysql.createConnection({     
@@ -25,4 +25,4 @@ function Food(){
     }
     
 }
-module.exports = Food;
+module.exports = Food;*/
