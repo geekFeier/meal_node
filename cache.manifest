@@ -1,11 +1,21 @@
 CACHE MANIFEST
-    #v0.11
+    #v0.17
     CACHE:
-    public/js/food.js
-    public/css/style.css
+	   public/img/cry.png
+	   public/img/food-bg.jpg
+	   public/img/laugh.png
+	   public/img/loading.png
+	   public/img/logo.ico
+	   public/img/question.png
 
-    NETWORK:
-    public/img/food-bg.png
+	   public/js/jquery.3.2.1.min.js
+	   public/js/food.js
+	   public/js/modifyFood.js
+
+	   public/css/style.css 
+    NETWORK: 
+    
+    
 
     FALLBACK:
     / /html/404.html
