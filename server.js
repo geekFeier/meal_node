@@ -9,7 +9,8 @@
 
  app.get('/', function(req, res) {
  	//解析URL参数
- 	var params = url.parse(req.url, true).query;
+	 var params = url.parse(req.url, true).query;
+	 console.log(params)
  	var mysql = require('mysql');
  	var connection = mysql.createConnection({
  		host: 'localhost',
@@ -18,9 +19,8 @@
  		database: 'meal',
  	});
 
- 	connection.connect();
-
- 	var modSql = "SELECT * FROM food_list";
+ 	connection.connect(); 
+ 	var modSql = "SELECT * FROM food_list WHERE type=" + params.type.toString();
 
  	connection.query(modSql, function(err, result) {
  		if (err) {
@@ -30,6 +30,5 @@
  		res.jsonp(result) 
  	});
 
- 	connection.end();
- 	// res.json(data) 
+ 	connection.end(); 
  }).listen(8000);
